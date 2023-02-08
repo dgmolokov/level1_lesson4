@@ -3,7 +3,6 @@ package ru.geekbrains.lesson4;
 import java.util.*;
 
 public class Main {
-
   private static final char DOT_EMPTY = '*';
   private static final char DOT_X = 'X';
   private static final char DOT_O = 'O';
@@ -81,7 +80,6 @@ public class Main {
     } else {
       checkLineCounterInvert = 0;
     }
-
     return false;
   }
 
@@ -93,7 +91,6 @@ public class Main {
         if (checkLine(symbol, i, j)) return true;
       }
     }
-
     return false;
   }
 
@@ -113,7 +110,6 @@ public class Main {
         if (checkLine(symbol, j, k)) return true;
       }
     }
-
     return false;
   }
 
@@ -152,12 +148,10 @@ public class Main {
     map[rowIndex][colIndex] = DOT_X;
   }
 
-  @SuppressWarnings("BooleanMethodIsAlwaysInverted")
   private static boolean isCellValid(int rowIndex, int colIndex) {
     if (rowIndex < 0 || rowIndex >= SIZE || colIndex < 0 || colIndex >= SIZE) {
       return false;
     }
-
     return map[rowIndex][colIndex] == DOT_EMPTY;
   }
 
